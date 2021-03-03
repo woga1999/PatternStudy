@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTemperature"
+        android:id="@+id/edit_temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextHumidity"
+        android:id="@+id/edit_humidity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -30,10 +30,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTemperature" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_temperature" />
 
     <EditText
-        android:id="@+id/editTextPressure"
+        android:id="@+id/edit_pressure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextHumidity" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_humidity" />
 
     <Button
         android:id="@+id/btn_pushdisplayupdate"
@@ -53,10 +53,10 @@
         android:text="Push Update"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPressure" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_pressure" />
 
     <TextView
-        android:id="@+id/textViewDisplay1"
+        android:id="@+id/textview_display1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_pulldisplayupdate" />
 
     <TextView
-        android:id="@+id/textViewDisplay2"
+        android:id="@+id/textview_display2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -77,7 +77,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDisplay1" />
+        app:layout_constraintTop_toBottomOf="@+id/textview_display1" />
 
     <Button
         android:id="@+id/btn_pulldisplayupdate"

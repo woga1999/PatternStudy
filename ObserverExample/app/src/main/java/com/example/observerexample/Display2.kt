@@ -14,13 +14,19 @@ class Display2 : Observer, DisplayElement {
         weatherData.registerObserver(this)
     }
 
-    override fun update(temp: String?, humidity: String?, pressure: String?) {
+    override fun pushUpdate(temp: String?, humidity: String?, pressure: String?) {
         this.temp = temp
         this.humidity = humidity
-        disply()
+        display()
     }
 
-    override fun disply() {
+    override fun pullUpdate() {
+        temp = weatherData.getTemperature
+        humidity = weatherData.getHumidity
+        display()
+    }
+
+    override fun display() {
         textView.text = "여기는 Display2 온도는 " + temp + "\n습도는 " + humidity
     }
 }

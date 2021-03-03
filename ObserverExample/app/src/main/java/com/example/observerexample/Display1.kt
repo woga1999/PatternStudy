@@ -16,14 +16,22 @@ class Display1 : Observer, DisplayElement {
         weatherData.registerObserver(this)
     }
 
-    override fun update(temp: String?, humidity: String?, pressure: String?) {
+    override fun pushUpdate(temp: String?, humidity: String?, pressure: String?) {
         this.temp = temp
         this.humidity = humidity
         this.pressure = pressure
-        disply()
+        //궁금!: null에 대한 예외처리 이게 최선인가?
+        if(!temp.isNullOrEmpty() && !humidity.isNullOrEmpty() && !pressure.isNullOrEmpty() ) display()
     }
 
-    override fun disply() {
+    override fun pullUpdate() {
+        temp = weatherData.getTemperature
+        humidity = weatherData.getHumidity
+        pressure = weatherData.getPressure
+        display()
+    }
+
+    override fun display() {
         textView.text = "여기는 Display1 온도는 " + temp + "\n습도는 " + humidity + "\n압력은 " + pressure
     }
 }

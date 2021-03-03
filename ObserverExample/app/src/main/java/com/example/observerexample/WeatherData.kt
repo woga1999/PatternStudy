@@ -1,17 +1,37 @@
 package com.example.observerexample
 
 class WeatherData : Subject {
-    var arrayList = ArrayList<Observer>()
+    var displayObserverArrayList = ArrayList<Observer>()
+    var temperature: String? = null
+    var humidity: String? = null
+    var pressure: String? = null
 
     override fun registerObserver(o: Observer) {
-        TODO("Not yet implemented")
+        displayObserverArrayList.add(o)
     }
 
     override fun removeObserver(o: Observer) {
-        TODO("Not yet implemented")
+        displayObserverArrayList?.let {
+            displayObserverArrayList.removeAt(displayObserverArrayList.indexOf(o))
+        }
     }
 
     override fun notifyObservers() {
-        TODO("Not yet implemented")
+        displayObserverArrayList?.let {
+            displayObserverArrayList.forEach {
+                it.update(temperature, humidity, pressure)
+            }
+        }
+    }
+
+    fun measurementsChanged(){
+        notifyObservers()
+    }
+
+    fun setMeasurements(temperature: String?, humidity: String?, pressure: String?){
+        this.temperature = temperature
+        this.humidity = humidity
+        this.pressure = pressure
+        measurementsChanged()
     }
 }

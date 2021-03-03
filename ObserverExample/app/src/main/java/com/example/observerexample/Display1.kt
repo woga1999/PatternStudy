@@ -1,11 +1,29 @@
 package com.example.observerexample
 
+import android.text.Editable
+import android.widget.TextView
+
 class Display1 : Observer, DisplayElement {
-    override fun update(temp: Float?, humidity: Float?, pressure: Float?) {
-        TODO("Not yet implemented")
+    private var temp: String? = null
+    private var humidity: String? = null
+    private var pressure: String? = null
+    private var weatherData: Subject
+    private var textView: TextView
+
+    constructor(weatherData: Subject, textView: TextView){
+        this.weatherData = weatherData
+        this.textView = textView
+        weatherData.registerObserver(this)
+    }
+
+    override fun update(temp: String?, humidity: String?, pressure: String?) {
+        this.temp = temp
+        this.humidity = humidity
+        this.pressure = pressure
+        disply()
     }
 
     override fun disply() {
-        TODO("Not yet implemented")
+        textView.text = "여기는 Display1 온도는 " + temp + "습도는 " + humidity + "압력은 " + pressure
     }
 }

@@ -9,9 +9,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val weatherData = WeatherData()
-        val display1 = Display1(weatherData, textViewDisplay1)
-        val display2 = Display2(weatherData, textViewDisplay2)
-        buttonDisplayUpdate.setOnClickListener {
+        Display1(weatherData, textViewDisplay1)
+        Display2(weatherData, textViewDisplay2)
+
+        btn_pushdisplayupdate.setOnClickListener {
             weatherData.setMeasurements(editTextTemperature.text.toString(), editTextHumidity.text.toString(), editTextPressure.text.toString())
         }
     }

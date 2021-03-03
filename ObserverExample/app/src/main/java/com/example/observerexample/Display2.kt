@@ -21,6 +21,6 @@ class Display2 : Observer, DisplayElement {
     }
 
     override fun disply() {
-        textView.text = "여기는 Display2 온도는 " + temp + "습도는 " + humidity
+        textView.text = "여기는 Display2 온도는 " + temp + "\n습도는 " + humidity
     }
 }

@@ -19,8 +19,6 @@ class WeatherData : Subject {
         }
     }
 
-
-
     override fun notifyObserversPushVersion() {
         displayObserverArrayList?.let {
             displayObserverArrayList.forEach {

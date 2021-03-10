@@ -1,4 +1,4 @@
 package com.example.factoryexample
 
-class NYCheesePizza: Pizza {
+interface Dough {
 }

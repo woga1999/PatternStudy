@@ -1,4 +1,4 @@
 package com.example.factoryexample
 
-class ChicagoCheesePizza: Pizza {
+class MarinaraSauce: Sauce {
 }

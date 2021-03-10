@@ -11,6 +11,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        var nyPizzaStore = NYPizzaStore()
+        println("First Order Start!")
+        nyPizzaStore.orderPizza("cheese")
+        println("\nFirst Order Done!")
 
+        println("\nSecond Order Start.")
+        nyPizzaStore.orderPizza("pepperoni")
+        println("\nSecond Order Done!")
     }
 }

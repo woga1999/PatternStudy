@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity() {
 
         val laptopWithAdapter = Adapter(laptop)
         println("랩탑에 어댑터 추가 설명 : " +laptopWithAdapter.showDescription())
-        println("랩탑 어댑터 추가 가격 : " + laptopWithAdapter.cost().toString())
+        println("랩탑에 어댑터 추가 가격 : " + laptopWithAdapter.cost().toString())
 
         val laptopWithAdapterAndKeyboard = Keyboard(laptopWithAdapter)
         println("랩탑 어댑터에 키보드까지 추가한 설명 : " + laptopWithAdapterAndKeyboard.showDescription())
-        println("랩탑 어댑터에 키보드까지 추가한 가 : " + laptopWithAdapterAndKeyboard.cost().toString())
+        println("랩탑 어댑터에 키보드까지 추가한 가격 : " + laptopWithAdapterAndKeyboard.cost().toString())
 
     }
 }

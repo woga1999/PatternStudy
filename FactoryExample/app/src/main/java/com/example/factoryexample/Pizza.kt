@@ -20,6 +20,6 @@ abstract class Pizza {
     }
 
     fun pizzaToString(): String {
-        return ""
+        return "Here, $name"
     }
 }

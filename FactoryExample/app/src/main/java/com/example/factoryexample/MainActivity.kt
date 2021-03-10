@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var nyPizzaStore = NYPizzaStore()
-        println("First Order Start!")
+        println("First Order Start!" )
         nyPizzaStore.orderPizza("cheese")
         println("\nFirst Order Done!")
 
